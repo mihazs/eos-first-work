@@ -18,7 +18,25 @@
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <itemPath>kernel.c</itemPath>
+    <itemPath>kernel.h</itemPath>
+    <itemPath>main.c</itemPath>
+    <itemPath>memory.c</itemPath>
+    <itemPath>memory.h</itemPath>
+    <itemPath>scheduler.c</itemPath>
+    <itemPath>scheduler.h</itemPath>
+    <itemPath>so.h</itemPath>
+    <itemPath>sync.c</itemPath>
+    <itemPath>sync.h</itemPath>
+    <itemPath>teste.h</itemPath>
+    <itemPath>types.h</itemPath>
+    <itemPath>user_conf.h</itemPath>
+    <itemPath>user_tasks.c</itemPath>
+    <itemPath>user_tasks.h</itemPath>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">
