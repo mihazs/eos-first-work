@@ -4,6 +4,15 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>sync.h</itemPath>
+      <itemPath>teste.h</itemPath>
+      <itemPath>scheduler.h</itemPath>
+      <itemPath>so.h</itemPath>
+      <itemPath>memory.h</itemPath>
+      <itemPath>kernel.h</itemPath>
+      <itemPath>types.h</itemPath>
+      <itemPath>user_conf.h</itemPath>
+      <itemPath>user_tasks.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -12,27 +21,18 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>sync.c</itemPath>
+      <itemPath>scheduler.c</itemPath>
+      <itemPath>memory.c</itemPath>
+      <itemPath>main.c</itemPath>
+      <itemPath>kernel.c</itemPath>
+      <itemPath>user_tasks.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
-    <itemPath>kernel.c</itemPath>
-    <itemPath>kernel.h</itemPath>
-    <itemPath>main.c</itemPath>
-    <itemPath>memory.c</itemPath>
-    <itemPath>memory.h</itemPath>
-    <itemPath>scheduler.c</itemPath>
-    <itemPath>scheduler.h</itemPath>
-    <itemPath>so.h</itemPath>
-    <itemPath>sync.c</itemPath>
-    <itemPath>sync.h</itemPath>
-    <itemPath>teste.h</itemPath>
-    <itemPath>types.h</itemPath>
-    <itemPath>user_conf.h</itemPath>
-    <itemPath>user_tasks.c</itemPath>
-    <itemPath>user_tasks.h</itemPath>
   </logicalFolder>
   <sourceRootList>
     <Elem>.</Elem>

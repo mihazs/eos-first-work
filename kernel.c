@@ -3,14 +3,14 @@
 #include "scheduler.h"
 #include "memory.h"
 
-// DeclaraÁ„o da fila de aptos
+// Declara√ß√£o da fila de aptos
 READY_queue_t ready_queue;
 u_int rr_quantum_control = RR_QUANTUM;
 
-// Rotinas de configuraÁ„o
+// Rotinas de configura√ß√£o
 void __interrupt() isr_INTERRUPTS()
 {
-   // VerificaÁ„o da flag de interrupÁ„o
+   // Verifica√ß√£o da flag de interrup√ß√£o
    if (INTCONbits.INT0IF) {      
       INTCONbits.INT0IF = 0;
    }
@@ -32,19 +32,19 @@ void __interrupt() isr_INTERRUPTS()
       rr_quantum_control  -= 1;
       if (rr_quantum_control == 0) {
          rr_quantum_control = RR_QUANTUM;
-         // Salva contexto da tarefa que est· em execuÁ„o
+         // Salva contexto da tarefa que est√° em execu√ß√£o
          SAVE_CONTEXT(READY);
          // Chama o escalonador para selecionar outra tarefa para executar
          scheduler();
-         // Restaura o contexto da tarefa que ir· executar
+         // Restaura o contexto da tarefa que ir√° executar
          RESTORE_CONTEXT();
       }
    #elif DEFAULT_SCHEDULER == PRIOR_SCHEDULER
-         // Salva contexto da tarefa que est· em execuÁ„o
+         // Salva contexto da tarefa que est√° em execu√ß√£o
          SAVE_CONTEXT(READY);
          // Chama o escalonador para selecionar outra tarefa para executar
          scheduler();
-         // Restaura o contexto da tarefa que ir· executar
+         // Restaura o contexto da tarefa que ir√° executar
          RESTORE_CONTEXT();
    #endif
    }
@@ -65,7 +65,7 @@ void config_os()
    TRISCbits.RC0                 = 0;
    #endif
    
-   // ConfiguraÁ„o das interrupÁıes
+   // Configura√ß√£o das interrup√ß√µes
    // Int0
    TRISBbits.RB0                 = 1;
    INTCONbits.INT0IE             = 1;
@@ -79,7 +79,7 @@ void config_os()
    T0CONbits.PSA                 = 0;
    T0CONbits.T0PS                = 0b101;
    
-   // ConfiguraÁ„o das tarefas de usu·rio
+   // Configura√ß√£o das tarefas de usu√°rio
    config_tasks();
 }
 
@@ -152,7 +152,7 @@ void start_os()
    SRAMInitHeap();
    #endif
    
-   // Habilita as interrupÁıes
+   // Habilita as interrup√ß√µes
    GLOBAL_INTERRUPTS_ENABLE();
    // Inicializar o timer0
    T0CONbits.TMR0ON = 1;

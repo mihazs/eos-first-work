@@ -11,7 +11,7 @@ u_int RR_scheduler()
    
    do {
    
-      // Escolha da tarefa que ser· executada (ordem de chegada)
+      // Escolha da tarefa que ser√° executada (ordem de chegada)
       task_to_run = (ready_queue.task_running + 1) % ready_queue.tasks_installed;
 
       if (++times == ready_queue.tasks_installed) return 0; 
@@ -26,8 +26,8 @@ u_int PRIOR_scheduler()
 {
    u_int task_to_run, menor_prioridade;
    
-   // A escolha pela tarefa de maior prioridade se dar· de maneira
-   // inversamente proporcional ao n˙mero atribuÌdo a prioridade.
+   // A escolha pela tarefa de maior prioridade se dar√° de maneira
+   // inversamente proporcional ao n√∫mero atribu√≠do a prioridade.
    u_int x, y;
    task_to_run      = 0;
    menor_prioridade = ready_queue.tasks_list[task_to_run].task_PRIOR;
@@ -48,7 +48,7 @@ u_int FIFO_scheduler()
    
    do {
    
-      // Escolha da tarefa que ser· executada (ordem de chegada)
+      // Escolha da tarefa que ser√° executada (ordem de chegada)
       task_to_run = (ready_queue.task_running + 1) % ready_queue.tasks_installed;
 
       if (++times == ready_queue.tasks_installed) return 0; 

@@ -12,10 +12,10 @@ void config_tasks()
    TRISDbits.RD1  = 0;
    TRISDbits.RD2  = 0;
    
-   // Inicializa a variável mutex
+   // Inicializa a variÃ¡vel mutex
    init_mutex(&m_test);
    
-   // Declara as tarefas como funções globais
+   // Declara as tarefas como funÃ§Ãµes globais
    asm("GLOBAL _task_1, _task_2, _task_3");
 }
 

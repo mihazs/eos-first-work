@@ -7,7 +7,7 @@
 extern READY_queue_t ready_queue;
 
 
-// Rotinas de configuração
+// Rotinas de configuraÃ§Ã£o
 void __interrupt() isr_INTERRUPTS();
 void config_os();
 
